@@ -1,0 +1,4 @@
+-r requirements_start.txt
+
+# detect magic number
+puremagic

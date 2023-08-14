@@ -1,0 +1,11 @@
+-r requirements_start.txt
+
+numpy
+numba
+pandas
+scikit-learn
+scipy
+sklearn
+matplotlib
+plotnine
+tabulate

@@ -1,0 +1,6 @@
+-r requirements_start.txt
+
+Pillow
+opencv-python
+scikit-image
+ffmpy
