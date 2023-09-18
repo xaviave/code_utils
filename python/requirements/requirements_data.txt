@@ -5,7 +5,7 @@ numba
 pandas
 scikit-learn
 scipy
-sklearn
+scikit-learn
 matplotlib
 plotnine
 tabulate
