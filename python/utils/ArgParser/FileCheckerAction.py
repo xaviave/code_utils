@@ -42,19 +42,19 @@ class FileCheckerAction(argparse.Action):
         check file path and file type
         """
         if not path or not os.path.exists(path):
-            raise FileNotFoundError("File Path doesnt exist")
+            raise ValueError(f"File '{path}' does not exist")
         # get magic number to get the file type else use file extension
         ftype: str = puremagic.from_file(path)
         if ftype not in self._allowed_extensions:
             raise AttributeError(f"File extension: {ftype} is not valid '{path}'")
 
     def __init__(self, option_strings, dest, nargs=None, **kwargs):
-        if nargs is not None:
-            raise ValueError("nargs not allowed")
-        super().__init__(option_strings, dest, **kwargs)
+        super().__init__(option_strings, dest, nargs, **kwargs)
 
     def __call__(self, parser, namespace, values, option_string=None):
-        if not os.path.exists(values) or self._check_media_type(values):
-            raise ValueError(f"File '{values}' does not exist or is in the wrong format (TXT)")
-        self._argument_validator(values)
+        if self.nargs is None:
+            self._check_media_type(values)
+        else:
+            for p in values:
+                self._check_media_type(p)
         setattr(namespace, self.dest, values)
