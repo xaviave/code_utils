@@ -1,0 +1,84 @@
+QWidget {
+    background-color: rgb(244, 244, 244);
+  }
+  
+  QLabel {
+    color: #333;
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 1.25;
+  }
+  
+  QPushButton {
+    background-color: #FFDb4D;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 10px;
+    font-family: Arial;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 4px 2px;
+    border-radius: 8px;
+  }
+  
+  QPushButton:pressed {
+    background-color: #FFCC33;
+  }
+  
+  QTextEdit {
+    background-color: white;
+    border: 1px solid #FFDb4D;
+    padding: 5px;
+    font-family: Arial;
+    font-size: 18px;
+    color: #333;
+    line-height: 1.5;
+    border-radius: 5px;
+  }
+
+  QSpinBox {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    padding: 5px;
+    font-size: 16px;
+    color: #333;
+    border-radius: 5px;
+  }
+  
+  QCheckBox {
+    background-color: none;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 16px;
+    color: #333;
+  }
+    
+  QCheckBox::indicator {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: #333;
+  }
+  
+  QCheckBox::indicator:hover {
+    background-color: #FFDb4D;
+  }
+  
+  QCheckBox::indicator:checked {
+    background-color: #FFCC33;
+  }
+  
+  QComboBox {
+    background-color: #ffffff;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 16px;
+    color: #333;
+  }
+  QComboBox QAbstractItemView {
+    border: none;
+    selection-background-color: #FFCC33;
+    selection-color: #333;
+}
