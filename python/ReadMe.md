@@ -4,6 +4,7 @@
 - Packages configs
 - Custom requirements
 - Utils python script / class
+- Pyqt curstom objects
 
 ## Information
 
